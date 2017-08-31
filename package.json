@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "tap --node-arg=--require --node-arg=@std/esm tests.js",
-    "coverage": "tap --node-arg=--require --node-arg=@std/esm --nyc-arg=--require --nyc-arg=@std/esm --coverage tests.js"
+    "test:mocha": "nyc --require @std/esm --exclude tests.*.js mocha --require @std/esm tests.mocha.js",
+    "coverage": "tap --nyc-arg=--require --nyc-arg=@std/esm --coverage tests.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
     "@std/esm": "^0.7.1",
+    "mocha": "^3.5.0",
+    "nyc": "^11.1.0",
     "tap": "^10.7.2"
   },
   "@std/esm": {

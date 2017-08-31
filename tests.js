@@ -1,7 +1,5 @@
-require("@std/esm")
-
 import { test } from 'tap'
-import { getAnswer } from './index.js'
+import { getAnswer } from './'
 
 test('ok', assert => {
   assert.equal(getAnswer(), 42)
